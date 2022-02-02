@@ -121,7 +121,7 @@ def print_var(**kwargs):
 
 
 def main():
-    sentences, tags = read_corpus('data/train.txt')
+    sentences, tags = read_corpus('/content/data/X.txt')
     print(len(sentences), len(tags))
 
 
