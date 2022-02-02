@@ -144,9 +144,9 @@ class BiLSTMCRF(nn.Module):
 
 
 def main():
-    sent_vocab = Vocab.load('./vocab/sent_vocab.json')
-    tag_vocab = Vocab.load('./vocab/tag_vocab.json')
-    train_data, dev_data = utils.generate_train_dev_dataset('./data/train.txt', sent_vocab, tag_vocab)
+    sent_vocab = Vocab.load('/content/vocab/sent_vocab.json')
+    tag_vocab = Vocab.load('/content/vocab/tag_vocab.json')
+    train_data, dev_data = utils.generate_train_dev_dataset('/content/data/X.txt', sent_vocab, tag_vocab)
     device = torch.device('cpu')
     model = BiLSTMCRF(sent_vocab, tag_vocab)
     model.to(device)
